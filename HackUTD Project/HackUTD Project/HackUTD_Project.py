@@ -13,7 +13,7 @@ instructors = []
 def printLine():
     print("-----------------------------------------------------------------------------------------------------------------------")
 def findProfessor(sub, catnum):
-    with open(r'C:\Users\abbas\OneDrive\Documents\GitHub\utd-grades\raw_data\\' + semester + " " + year + '.csv', "r") as csv_file:
+    with open(r'utd-grades\raw_data\\' + semester + " " + year + '.csv', "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
@@ -26,7 +26,7 @@ def findProfessor(sub, catnum):
                 instructors.append(instructor)
             line_count += 1
 def findGrades(prof, sub, catnum):
-    with open(r'C:\Users\abbas\OneDrive\Documents\GitHub\utd-grades\raw_data\\' + semester + " " + year + '.csv', "r") as csv_file:
+    with open(r'utd-grades\raw_data\\' + semester + " " + year + '.csv', "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
@@ -73,7 +73,7 @@ def findGrades(prof, sub, catnum):
                 break
             line_count += 1
 def pullRMP(prof, sub, catnum):
-    with open(r'C:\Users\abbas\OneDrive\Documents\HackUTD_RMP_Data.csv', "r") as csv_file:
+    with open(r'HackUTD_RMP_Data.csv', "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
